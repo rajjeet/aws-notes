@@ -1,0 +1,16 @@
+=============================================================
+Optimizing enterprise economics with Serverless Architectures
+=============================================================
+- 85% of servers in practice are underutilized 
+- asynchronous, event-based approach to application design is common in serverless architecture
+- naturally parallel
+- can run in IoT devices
+
+When serverless is not the right choice:
+	- goal is NOT to make any changes to the app
+	- need low-level networking control
+	- when app hasn't been migrated to cloud
+
+Serverless offers to main benefits:
+1. No idle servers
+2. No resources wasted towards operating servers

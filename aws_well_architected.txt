@@ -1,0 +1,171 @@
+--------------------------------------------------
+The Five Pillars of the Well-Architected Framework
+--------------------------------------------------
+
+General Design Principles
+-------------------------
+    - Stop guessing your capacity needs
+    - Test systems at production scale
+    - Automate to make architectual experimentation easier
+    - Allow for evolutionary architectures 
+    - Drive architectures using data
+    - Improve through game days
+
+1. Operational Excellence 
+-------------------------
+    + ability to run and monitor systems
+        - deliver business value
+        - improve supporing processes
+    + Design Principles
+        - Perform operations as code
+        - Annotate documentation
+        - Make frequent, small, reversible changes
+        - Refine operations procedures frequenctly 
+        - Anticipate failure
+        - Learn from all operational failures
+    + Best practices areas
+        - Prepare
+            > OPS 1: What factors drive your operational priorities?
+            > OPS 2: How do you design your workload to enable operability?
+            > OPS 3: How do you know that you are ready to support a workload?
+        - Operate
+            > OPS 4: What factors drive your understanding of operational health?
+            > OPS 5: How do you manage operational events?
+        - Evolve
+            > OPS 6: How do you evolve operations?
+    + Key AWS Services
+        - Central   >> CloudFormation 
+        - Prepare   >> Config and Config Rules (standardize workloads and compliance)
+        - Operate   >> CloudWatch (monitor operational health)
+        - Evolve    >> Elasticsearch Service (analyze logs)
+            
+2. Security
+-----------
+    + ability to protect your IT assets    
+        - risk assements
+        - mitigation strategies
+        - deliver business value
+    + Design Principles
+        - Implment a strong identity foundation
+        - Enable traceability
+        - Apply security at all layers
+        - Automate security best practices
+        - Protect data in transit and at rest
+        - Prepare for security events
+    + Best practice areas
+        - Identity and access management 
+            > SEC 1: How are you protecting access to and use of the AWS account root credentials?
+            > SEC 2: How are you defining roles and responsibilities of system users to control human access to the AWS Management console and API?
+            > SEC 3: How are you limiting automated access to AWS resources (apps, scripts, 3rd party tools)?
+        - Detective controls
+            > SEC 4: How are you capturing and analyzing logs?
+        - Infrastructure protection
+            > SEC 5: How are you enforcing network and host-level boundary protection?
+            > SEC 6: How are you leveraging AWS service-level security features?
+            > SEC 7: How are you protecting the integrity of the operating system? 
+        - Data protection
+            > SEC 8: How are you classifying your data?
+            > SEC 9: How are you encrypting and protecting your data at rest?
+            > SEC 10: How are you managing keys?
+            > SEC 11: How are you encrypting and protecting your data in transit?
+        - Incident response
+            > SEC 12: How do you ensure that you have the appropriate incident response?
+    + Key AWS Services
+        - Identity and access management    >> IAM + MFA
+        - Detective controls                >> CloudTrail, Config, and CloudWatch
+        - Infrastructure protection         >> VPC
+        - Data protection                   >> ELB, EBS, S3, RDS, Macie, and KMS
+        - Incident response                 >> IAM and CloudFormation
+
+3. Reliability
+--------------
+    + ability to recover from disruption
+        - dynamically aquire resources to meet demand
+        - handle misconfigurations, network issues, crashes
+    + Design Principles
+        - Test recovery procedures
+        - Automatically recover from failure
+        - Scale horizontally to increase aggregate system availability
+        - Stop guessing capacity
+        - manage change in 
+    + Best practice areas
+        - Foundations
+            > REL 1: How are you managing AWS service limits for your accounts?
+            > REL 2: How are you planning your network topology on AWS?
+        - Change management
+            > REL 3: How does your system adapt to changes in demand?
+            > REL 4: How are you monitoring AWS resources?
+            > REL 5: How are you executing change?
+        - Failure management
+            > REL 6: How are you backing up your data?
+            > REL 7: How does your system withstand component failures?
+            > REL 8: How are you testing your resiliency?
+            > REL 9: How are you planning for disaster recovery?
+    + Key AWS Services
+        - Foundations           >> IAM, VPC, Trusted Advisor, and AWS Shield
+        - Change management     >> CloudTrail, Config, Auto Scaling and CloudWatch
+        - Failure management    >> CloudFormation, S3, and Glacier
+        
+
+4. Performance Efficiency 
+-------------------------
+    + ability to use efficently use computing resources to meet requirements
+        - maintain efficiency as changes happen
+    + Design Principles
+        - Democratize advanced technologies
+        - Go global in minutes
+        - Use serverless architectures
+        - Experiement more often
+        - Mechanical sympathy
+    + Best practice areas
+        - Selection
+            > PERF 1: How do you select the best performing architecture?
+            > PERF 2: How did you select your compute solution (Instances, containers, and functions)? 
+            > PERF 3: How did you select your storage solution?
+            > PERF 4: How do you select your database solution?
+            > PERF 5: How do you configure your networking solution?            
+        - Review 
+            > PERF 6: How do you ensure that you continue to have the most appropriate resource type as new resource types and features are introduced?
+        - Monitoring
+            > PERF 7: How do you monitor your resources post-launch to ensure they are performing as expected?
+        - Tradeoffs 
+            > How do you use tradeoffs to improve performance?
+    + Key AWS Services
+        - Selection
+            - Compute   >> Auto Scaling
+            - Storage   >> EBS SSD + PIOPS, S3, and S3 Transfer Acceleration
+            - Database  >> RDS PIOPS and read replicas, DynamoDB
+            - Network   >> Route 53 latency routing, VPC endpoints, and AWS Direct Connect
+        - Review        >> AWS Blog
+        - Monitoring    >> CloudWatch and Lambda
+        - Tradeoffs     >> Elasticache, CloudFront, Snowball, RDS Read replicas
+
+5. Cost Optimization
+--------------------
+    + ability to avoid or eliminate cost and suboptimal resources
+    + Design Principles
+        - Adopt a consumption model
+        - Measure overall efficiency
+        - Stop spending money on data center operations
+        - Analyze and attribute expenditure
+        - Use managed services to reduce cost of ownership
+    + Best practice areas
+        - Cost-Effective resources
+            > COST 1: Are you considering cost when you select AWS services for your solution?
+            > COST 2: Have you sized your resources to meet your cost targets?
+            > COST 3: Have you selected the appropriate pricing model to meet your cost targets?            
+        - Matching Supply and demand
+            > COST 4: How do you make sure your capacity matches but does not substantially exceed what your need?
+        - Expenditure Awareness
+            > COST 5: Do you consider data-transfer charges when designing your architecture?
+            > COST 6: How are your monitoring usage and spending?
+            > COST 7: Do you decommision resources that you no longer need or stop resources that are temporarily not needed?
+            > COST 8: What access controls and procedures do you have in place to govern AWS usage?
+        - Optimizing Over Time
+            > How do you manage and/or consider the adoption of new services?
+    + Key AWS Services:
+        - Main                          >> Cost allocation tags
+        - Cost-Effective Resources      >> Reserved Instances, Cost Explorer
+        - Matching supply and demand    >> Auto Scaling
+        - Expenditure Awareness         >> CloudWatch alarms, SNS
+        - Optimizing over Time          >> AWS Blog, Trusted Advisor 

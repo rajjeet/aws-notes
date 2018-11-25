@@ -1,0 +1,114 @@
+Simple Storage Services (S3)
+	+ Ideal Usage Pattern
+		- distribution of static content
+	
+	+ Anti-Patterns
+		- File system
+		- Structured data with query - need database for metadata support
+		- Rapidly changing data
+		- Backup and archival storage
+		- Dynamic web hosting
+
+Glacier
+	+ Ideal Usage Pattern
+		- archiving
+	+ Anti-Patterns
+		- Rapidly changing data
+		- Real time access
+
+Elastic Block Storage
+	+ Ideal Usage Pattern
+		- changes frequently and requires long-term persistance 
+		- databases and file systems
+		- high rate of random disk reads and writes
+	+ Anti-Patterns
+		- Temporary storage
+		- Highly-durable storage
+		- Static data and web-content
+		
+EC2 Instance Store Volume
+	+ Ideal Usage pattern
+		- temporary storage that's continuously changing
+		- high performance database workloads with replication to durable storage
+		- sequential access
+	+ Anti-Patterns
+		- Persistant storage
+		- Relational database storage
+		- Shared Storage 
+		- Snapshots
+
+AWS Import/Export (Snowball)
+	+ Ideal Usage Pattern
+		- Transferring large amounts of data b/w cloud and on-premises
+	+ Anti-Pattern
+		- Able to transfer data over internet in less than a week
+
+Storage Gateway
+	+ Ideal Usage Pattern
+		- corporate file sharing
+		- disaster recovery
+		- mirroring to cloud
+	+ Anti-Pattern
+		- Database storage
+
+CloudFront
+	+ Ideal Usage Pattern
+		- frequenctly-accessed static content
+		- dynamic web applications over HTTP
+	+ Anti-Patterns
+		- Programmatic cache invalidation
+		- Infrequently requsted data
+
+Simple Queue Service (SQS)
+	+ Ideal Usage Pattern
+		- reduce tight coupling b/w components 
+		- variable consumers and producers
+	+ Anti-Patterns
+		- Binary or large messages
+		- Long-term storage
+		- High-speed message queuing or very short tasks
+
+Relational Database Service (RDS)
+	+ Ideal Usage Pattern
+		- structured data with complex query and joining
+	+ Anti-Pattern
+		- Index and query-focused data without complex transactions and joins
+		- Numerous BLOBs
+		- Automated scalability
+		- Unsupported databases
+		- Compplete control
+
+DynamoDB
+	+ Ideal Usage Pattern
+		- low read and write latencies
+		- scale storage and throughput without downtime
+	+ Anti-Pattern
+		- Prewritten application tied to traditional relational database
+		- Joins and complex transactions
+		- BLOB data
+		- Large data with low I/O rate
+
+Elasticache
+	+ Ideal Usage Pattern
+		- low-latency access
+		- read-heavy applications
+		- reduce I/O intensive queries and computationally-intensive calculations
+		- in-memory NoSQL database
+	+ Anti-Patterns
+		- Persistent data
+
+Redshift
+	+ Ideal Usage Pattern
+		- large scale datasets 
+	+ Anti-Patterns
+		- OLTP workloads
+		- BLOB data
+
+EC2 Database
+	+ Ideal Ussage Pattern
+		- complete control
+		- using unsupported database engines
+	+ Anti-Patterns
+		- Automatic scalling 
+		- Maintainance 
+	

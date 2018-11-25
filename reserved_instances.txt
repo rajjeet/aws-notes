@@ -1,0 +1,50 @@
+Reservation model applicable for:
+    - EC2 
+    - RDS
+    - ElastiCache
+    - Redshift
+    - DynamoDB
+
+On-demand instances must match particular attributes to qualify for RI
+
+When RI purchsed in specific AZ, it provides capacity reservation
+	- capacity reservation - improves likelyhood of receiving in specific AZ when needed
+
+Standard RI vs Convertible 
+	- Convertible has to be 3 year commitment vs standard can be 1 or 3
+	- Standard can only change size while CRI can change size, type, and family
+	- CRI can only change platform, and tenacy
+
+CRI useful when:
+	- purchasing from payer's account
+	- workloads likely to change
+	- hedge against price drops
+	- avoid capacity planning
+	- predictable compute requirements 
+	- CRI or SRI can be zonal or regional
+
+Size flexibility isnt applicable when:
+	- purchased for specific AZ
+	- bare metal instances
+	- dedicated tenancy 
+	- Windows
+
+Size flexibility available for linux based database instances and BYOL Oracle database.
+
+Instance attribute used for discounting:
+	- Instance type i.e. m4 t2
+	- Platform - i.e. windows, ubuntu etc
+	- Tenancy
+	- Regional or Zonal
+
+Good practice to enforce the use of specific ec2 configurations via AWS Config and AWS Service Catalog
+
+Metrics in Cost Explorer:
+	- EC2 RI Utilization % = RI used hours / total RI purchased hours
+	- EC2 RI Converage % = RI used hours / total EC2 used hours
+
+Relevant data in AWS Cost and Usage report"
+	- Calculate savings = On-demand - discounted rate
+	- RI discounts
+
+

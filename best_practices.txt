@@ -1,0 +1,82 @@
+The Cloud Computing Difference
+	IT assets become programmable resources
+	Global, availabile and unlimited capacity
+	Higher level managed services
+	Security built in
+
+Design Principles
+	+ Scalabilitiy
+		- Scaling vertically
+		- Scaling horizontally
+			- Staleless applications
+			- Push (ELB) vs pull (SQS) model
+	+ Disposable resources instead of fixed servers
+		- Instantiating compute resources
+			- Boostrapping
+			- Golden images
+			- Docker containers
+			- Configuration management tools (Chef, Puppet)
+		- Infrastructure as code
+			- Programmable infrastructure (CloudFormation)
+	+ Automation
+		- AWS Elastic Beanstalk - upload app code and done
+		- Amazon EC2 Auto recovery - recover impaired EC2 instances
+		- Auto Scaling
+		- CloudWatch Alarms
+		- CloudWatch Events
+		- AWS Opsworks lifecycle events - configure events
+		- AWS Lambda scheduled events
+	+ Loose coupling
+		- Well-Defined interfaces
+			- API Gateway
+		- Service Discovery
+			- ELB
+			- Route53
+		- Asynchronous Integration
+			- SQS
+			- Kinesis
+			- SWF
+		- Graceful Failure
+	+ Services, not servers
+		- Managed services
+		- Serverless architectures
+	+ Databases
+		- Relational - joins, complex transactions, and dynamic access patterns
+		- NoSQL - scalability over flexible schema and predetermined fixed access pattern
+		- Data warehouses - analytics and reporting on large datasets 
+		- Search - full text searching 
+	+ Removing single points of failure
+		- Introduce redundancy
+			- Standby redundency (failover)
+				- stateful components
+			- Active redundency (distribtion)
+		- Detect failure
+		- Durable data store
+			- Synchronous replication
+			- Asynchronous replication
+			- Quorum-based replication
+		- Automated multi-data center resilience
+			- Availability Zones and regions 
+		- Fault isolation and tradititonal horizontal scaling 
+			- Shuffle sharding 
+	+ Optimizing for cost
+		- Right Sizing
+		- Elasticity
+		- Purchasing Options
+			- Reserved Capacity
+			- Spot Instances
+			- Bidding strategy
+			- Mix with On-demand
+			- Spot blocks for defined duration workloads
+	+ Caching
+		- Application data caching 
+		- Edge caching for static content	
+	+ Security
+		- Utilize AWS features for defense in depth
+		- Offload security responsibility to AWS
+		- Reduce priviliged access
+			- IAM Roles or Federation
+			- Cognito
+		- Security as code
+			- CloudFormation
+			- AWS Service Catalog

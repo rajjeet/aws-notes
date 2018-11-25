@@ -1,0 +1,21 @@
+------------------------
+Security Best Practices
+------------------------
+    + AWS Security Responsibility Model
+        - AWS secures infrastructure and services
+            - facilities
+            - physical security of hardware
+            - network infrastructure
+            - virtualization infrastructure
+        - Customer secures AMIs, OS, applications, data, databases, credentials, policies and configuration
+        - 3 Service types
+            > Infrastructure services
+                - You control OS and platform-specific access control
+                - EC2 and related services (VPC, EBS, Auto Scaling)
+            > Container services
+                - You setup network controls and manage access via IAM
+                - RDS, EMR, and Elastic Beanstalk
+            > Abstracted services
+                - S3, Glacier, Dynamo, SQS, SES 
+    
+

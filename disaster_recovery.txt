@@ -1,0 +1,42 @@
+Recovery Time Objective (RTO) - time for DR solution to go live
+Recovery Point Objective (RPO) - amount of acceptable data loss in terms of time
+
+4 types of disaster recover:
+	1. Backup and Restore
+		- Backup and Restore
+			+ Select AWS tool to backup data
+			+ Select retention policy
+			+ Verify security measures like encryption and access policies
+			+ Testing and benchmarking restoration
+	2. Pilot Light
+		- Preparation
+			+ Setup EC2 to mirror data
+			+ Ensure software libraries available in AWS
+			+ Maintain AMI with on-premises
+			+ Build and test automation
+		- Restoration
+			+ Start EC2 from AMIs
+			+ Vertically scale databases
+			+ Add Multi-AZ to databases and added DR solution
+			+ DNS point to new servers
+			+ Boostrap unprepared AMIs
+	3. Warm Standby
+		- Preparation
+			+ Setup EC2 to mirror data
+			+ Maintain AMI with on-premises
+			+ Run barebone setup of on-premises workload on AWS
+			+ Keep software patches synced with on-premises
+		- Restoration
+			+ Horizontally and vertically scale running EC2 instances
+			+ Update DNS records or configure health checks to failover to AWS
+			+ Auto scale EC2 instances to right size 
+			+ Add Multi-Az to databases and add DR solution
+	4. Multi Site
+		- Preparation
+			+ Setup duplicate AWS environment to mirror on-premises
+			+ Use DNS weighting to balance traffic b/w environments 
+		- Restoration
+			+ Auto scale EC2 instances to right size
+			+ Application logic to use AWS data sources
+			+ Adjust DNS weighting or use health checks to failover
+

@@ -1,0 +1,8 @@
+2 Options for VPN connections
+- Border Gateway Protocol (BGP)
+	- need IP address and BGP autonomous system number (ASN) of the customer gateway
+	- once provided, a config is downloaded for the specific VPN device 
+- static
+	- configure static routes (CIDR ranges) on customer gateway
+
+Can route internet traffic from data center through VPN

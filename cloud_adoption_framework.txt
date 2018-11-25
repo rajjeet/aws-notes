@@ -1,0 +1,91 @@
+Business-oriented
+=================
+Business (Value Realization)
+-----------------
+    - optimize business value
+    > IT Finance
+        - address the org's ability to plan, allocation and manage IT budget that aligns with cloud consumption model 
+        - shift from capital to consumpted based pricing
+    > IT Strategy
+        - allow IT to focus on business requirements and new processes to solve challenages
+    > Business Realization
+        - org's ability to measure benefits from IT investments using TCO and ROI
+    > Business Risk Management
+        - understanding the risks that steam from constraints on IT agility
+
+People (Roles and Readiness)
+-----------------
+    - maintain the workforce and ensure compentencies 
+    > Resource Management
+        - ability to project personnel needs and hire and retain talent neccessary
+    > Incentive Management
+        - workers recieve competitive compensations and benefits for the value their bring to org
+        - key to attracting and retaining employees
+    > Career Management
+        - personal fulfillment of employees, their career opportunities and their financial security
+    > Training Management
+        - employees having knowledge and skills to perform their roles and comply with org standards
+        - training to keep updated
+    > Organizational Change Management
+        - manage the effects and impacts of business, structural, and cultural change with cloud adoption
+
+Governance (Prioritization and Control)
+-----------------
+    - business governance of the cloud, and manage cloud investments to evaluate business outcomes 
+    - maximize business value from IT investments and minimize business risks
+    > Portfolio Management
+        - manage and prioritize IT investments, programs and projects in alignment to org's business goals        
+    > Program and Project Management
+        - manage several related projects to improving Organizational performance and completing projects on time and budget
+    > Business Performance Measurement
+        - define cloud-centric KPIs and processes to ensure cloud consumption is mapped to business outcomes 
+    > License Management
+        - procure, distribute and manage liscenses needed for IT systems
+
+Techonology-oriented 
+=================
+Platform (Applications and Infrastructure)
+-----------------
+    - deliver and optimize cloud solutions and services
+    > Compute Provisining        
+    > Network Provisining         
+    > Storage Provisining
+    > Database Provisining
+    > System and Solution architecture
+        - creating new architecture standards
+    > Application Development 
+        - CI/CD skills and processes are critical
+
+Security (Risk and Compliance)
+-----------------
+    - cloud architecture aligns with security requirements, resiliency, and compliance requirements
+    > Identity and Access Management
+        - access control mechanisms and management of permissions
+    > Detective Control
+        - logging for visibility of the system's security state
+    > Infrastructure Security
+        - automating the build of your security infrastructure
+    > Data Protection
+        - control over access of data
+    > Incident Response    
+        - respond to security incidents to prevent harm and investigating causes
+
+Operations (Manage and Scale)
+-----------------
+    - system health and reliability during cloud migration and operation using best practices
+    > Service Monitoring
+        - detect and response to issues regarding health of IT services and enterprise applications
+        - automated responses
+    > Application Performance Monitoring
+        - right-size the cloud services to meet performance needs
+    > Resource Inventory Management
+        - align assets in the most cost-effective manner
+    > Release Management / Change Management
+        - manage, plan, and schedule changes to IT environment
+        - CI/CD to rapidly manage releases and roll-backs
+    > Reporting and Analytics 
+        - ongoing analysis and reporting of KPIs relating to SLAs and OLAs        
+    > Business Continuity / Disaster Recovery
+        - able to operate during significant failure of IT services and recovering in an appropirate manner
+    > IT Service Catalog
+        - select, maintain, advertise, and deliver SLA or set of IT services

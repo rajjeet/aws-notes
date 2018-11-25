@@ -1,3 +1,4 @@
+aws-waf-owasp.pdf
 aws-financial-services-grid-computing.pdf
 extend-your-it-infrastructure-with-amazon-vpc.pdf
 optimizing-enterprise-economics-serverless-architectures.pdf
